@@ -18,7 +18,7 @@ const DataGrid = ({ csv }) => {
         {csv.data.map((row, index) => (
           <tr key={index}>
             {row.map((col) => (
-              <td key={col}>{col}</td>
+              <td key={col.nome}>{col.nome}</td>
             ))}
           </tr>
         ))}

@@ -1,3 +1,13 @@
-Codigo,Nome,Unidade,Quantidade,Receita Total,Receita Liquida,CPV ou CMV,CPV ou CMV Unit.
-1,Camiseta Sao Paulo,Un,500,5000,10,1000,2
-2,Camiseta Real Madrid,Un,250,2500,10,250,1
+Codigo,Nome,Quantidade,Unidade de Medida,Receita Total de Vendas,Custo Total de Vendas
+1,Camiseta Sao Paulo,500,Un,5000,10,
+2,Camiseta Real Madrid,250,Un,2500,10,
+3,Camiseta Sao Paulo,500,Un,5000,10,
+4,Camiseta Real Madrid,250,Un,2500,10,
+1A,Camiseta Sao Paulo,500,Un,5000,10,
+2A,Camiseta Real Madrid,250,Un,2500,10,
+3A,Camiseta Sao Paulo,500,Un,5000,10,
+4A,Camiseta Real Madrid,250,Un,2500,10,
+11,Camiseta Sao Paulo,500,Un,5000,10,
+12,Camiseta Real Madrid,250,Un,2500,10,
+21,Camiseta Sao Paulo,500,Un,5000,10,
+21,Camiseta Real Madrid,250,Un,2500,10,
