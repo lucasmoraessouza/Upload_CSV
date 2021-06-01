@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import DataGrid from "./DataGrid";
+import "./styles.css";
 
-function App() {
+const parseCSV = (text) => {
+  const result = {
+    header: [],
+    data: [],
+  };
+
+  const [header, ...content] = text.split("\n");
+
+  result.header = header.split(",");
+
+  const maxCols = result.header.length;
+
+  content.forEach((item) => {
+    result.data.push(item.split(",").slice(0, maxCols));
+    console.log(result.data);
+  });
+
+  return result;
+};
+
+export default function App() {
+  const [csv, setCsv] = useState(null);
+  useEffect(() => {
+    fetch("/teste1.csv")
+      .then((r) => r.text())
+      .then((text) => {
+        setCsv(parseCSV(text));
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataGrid csv={csv} />
     </div>
   );
 }
-
-export default App;
